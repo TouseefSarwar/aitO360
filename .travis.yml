@@ -6,5 +6,5 @@ addons:
     access_key: "tsKsjvTpmoyh86zyH9nb"
     
 script:
-  - curl -u "touseefiosdev1:tsKsjvTpmoyh86zyH9nb" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/test-suite" -F "file=@/Outdoor360/UITestCases/Login/Login-Runner.zip"
+  - curl -u "touseefiosdev1:tsKsjvTpmoyh86zyH9nb" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/test-suite" -F "file=@Outdoor360/UITestCases/Login/Login-Runner.zip"
   
