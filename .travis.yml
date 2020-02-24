@@ -1,5 +1,5 @@
 language: swift
-
+os: osx
 addons:
   browserstack:
     username: "touseefiosdev1"
