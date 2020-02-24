@@ -1,0 +1,13 @@
+
+
+
+language: swift
+
+addons:
+  browserstack:
+    username: "touseefiosdev1"
+    access_key: "tsKsjvTpmoyh86zyH9nb"
+    
+script:
+  - curl -u "touseefiosdev1:tsKsjvTpmoyh86zyH9nb" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/test-suite" -F "file=@/Outdoor360/UITestCases/Login/Login-Runner.zip/Login-Runner.zip"
+  - curl -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/build" -d "{"devices": ["iPhone 11 Pro Max-13"], "app": "bs://21d5fe7f15386caf6eb4d944d973e8eb8a0c9ec3", "deviceLogs" : "true", "testSuite": "bs://63830acbf6c28fee42b4e8f36069d3b318b61748"}" -H "Content-Type: application/json" -u "touseefiosdev1:tsKsjvTpmoyh86zyH9nb"
