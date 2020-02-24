@@ -1,10 +1,11 @@
 language: swift
-os: osx
+os : osx
+
 addons:
   browserstack:
     username: "touseefiosdev1"
     access_key: "tsKsjvTpmoyh86zyH9nb"
     
+    
 script:
-  - curl —-request POST "https://api-cloud.browserstack.com/app-automate/xcuitest/build" -d "{\"devices\": [\"iPhone 11 Pro Max-13\"], \"app\": \"bs://21d5fe7f15386caf6eb4d944d973e8eb8a0c9ec3\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://46a068d93be31940e64047d4e13854ac11b873fa\"}" -H "Content-Type: application/json" -u "touseefiosdev1:tsKsjvTpmoyh86zyH9nb"
-
+    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://21d5fe7f15386caf6eb4d944d973e8eb8a0c9ec3\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://46a068d93be31940e64047d4e13854ac11b873fa\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"touseefiosdev1:tsKsjvTpmoyh86zyH9nb\""
