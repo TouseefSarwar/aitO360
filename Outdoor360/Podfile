@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Outdoor360' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+	
+ pod 'Alamofire'
+ pod 'SwiftyJSON'
+ pod 'Kingfisher'
+ pod 'SnapKit'
+ pod 'IQKeyboardManagerSwift'
+ pod 'ActiveLabel'
+ pod 'AppAuth','~> 1.2'
+ pod 'SkyFloatingLabelTextField'
+ pod 'DateToolsSwift'
+ pod 'GoogleSignIn' 
+ pod 'GooglePlaces'
+ pod 'GooglePlacePicker'
+ pod 'GoogleMaps'
+ pod 'PINRemoteImage'
+ pod 'JJFloatingActionButton'
+ pod 'NKVPhonePicker'
+ pod 'PinCodeTextField'
+ pod 'FBSDKLoginKit'
+ pod "TLPhotoPicker"
+ pod 'CropViewController'
+ pod 'TwitterKit'
+ pod 'SwiftSoup'
+ pod 'ReadabilityKit'
+ pod 'Firebase/Core'
+ pod 'Firebase/Messaging' 
+end
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Outdoor360.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>CE2D4B23A43CC6F5980933719A8473DC398FD268</string>
+				<key>dateExpires</key>
+				<string>23/07/2020</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CE2D4B23A43CC6F5980933719A8473DC398FD268</string>
+						<key>dateExpires</key>
+						<string>23/07/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Alamofire.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>SNA8SPW7S6</string>
+						<key>name</key>
+						<string>Yentna, Inc</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CE2D4B23A43CC6F5980933719A8473DC398FD268</string>
+						<key>dateExpires</key>
+						<string>23/07/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Kingfisher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>SNA8SPW7S6</string>
+						<key>name</key>
+						<string>Yentna, Inc</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CE2D4B23A43CC6F5980933719A8473DC398FD268</string>
+						<key>dateExpires</key>
+						<string>23/07/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SwiftyJSON.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>SNA8SPW7S6</string>
+						<key>name</key>
+						<string>Yentna, Inc</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>SNA8SPW7S6.com.Yentna.Outdoor360</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>SNA8SPW7S6</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>SNA8SPW7S6.com.Yentna.Outdoor360</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Outdoor360.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>abccfe8b-686a-409c-b8f8-982e734bf18f</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.Yentna.Outdoor360</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>SNA8SPW7S6</string>
+				<key>name</key>
+				<string>Yentna, Inc</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

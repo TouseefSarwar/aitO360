@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PtJ-eH-fYl">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="g5V-Xn-owp">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="PtJ-eH-fYl" customClass="SettingsViewController" customModule="Outdoor360" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wp3-7F-FUj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA8-dD-UMa" customClass="ViewX" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="193" width="320" height="385"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-Hy-NWq">
+                                        <rect key="frame" x="16" y="330" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="kp6-2P-RgI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sign out" image="logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SignOut:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="IDa-ci-q4t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-qK-n9d">
+                                        <rect key="frame" x="16" y="287" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="UAy-19-Kou"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.869140625" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Share Outdoors360 App" image="shareLink"/>
+                                        <connections>
+                                            <action selector="shareLink:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="a7p-iW-RiT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ta2-Hj-X6m" customClass="ImageViewX" customModule="Outdoor360" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JIl-wc-Ga8"/>
+                                            <constraint firstAttribute="width" constant="40" id="oaB-a5-YaG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1k-Sl-POy">
+                                        <rect key="frame" x="64" y="26.5" width="44.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xca-un-uGH">
+                                        <rect key="frame" x="16" y="244" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="QYK-OH-PxB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Settings" image="settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-2g-i66">
+                                        <rect key="frame" x="16" y="158" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="XKE-2p-cR6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Book Trips" image="trip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="trips:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="oYI-uz-Y6v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frc-n6-pge">
+                                        <rect key="frame" x="16" y="201" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="tmy-B1-4N2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Read Reports" image="report">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reports:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="oro-G5-Q1K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o80-7e-l44">
+                                        <rect key="frame" x="16" y="115" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="oGS-pb-OQv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Explore Stories" image="story-1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stories:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="cBG-XV-OwD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33H-bU-7WX">
+                                        <rect key="frame" x="16" y="72" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7Nb-bh-vg8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Go To The Outdoors" image="home">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gotoSocail:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="T9k-xS-J5b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mF-0F-Ndx">
+                                        <rect key="frame" x="258" y="16" width="50" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="OUy-dm-8EI"/>
+                                            <constraint firstAttribute="width" constant="50" id="rnj-X8-3ht"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="23" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="big_cancel">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="PtJ-eH-fYl" eventType="touchUpInside" id="qcb-e9-jiA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16358840465545654" green="0.16225415468215942" blue="0.18808755278587341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Rq-2g-i66" secondAttribute="trailing" constant="16" id="2b4-HE-k0t"/>
+                                    <constraint firstItem="xca-un-uGH" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="2ts-PL-XHi"/>
+                                    <constraint firstAttribute="trailing" secondItem="frc-n6-pge" secondAttribute="trailing" constant="16" id="6u9-9p-NUl"/>
+                                    <constraint firstItem="33H-bU-7WX" firstAttribute="top" secondItem="ta2-Hj-X6m" secondAttribute="bottom" constant="16" id="CKM-Eo-X49"/>
+                                    <constraint firstItem="3Rq-2g-i66" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="Cq7-B5-Zlw"/>
+                                    <constraint firstItem="xdZ-qK-n9d" firstAttribute="top" secondItem="xca-un-uGH" secondAttribute="bottom" constant="8" id="Huf-Z9-b9b"/>
+                                    <constraint firstItem="KJg-Hy-NWq" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="KMg-7y-5fZ"/>
+                                    <constraint firstItem="o80-7e-l44" firstAttribute="top" secondItem="33H-bU-7WX" secondAttribute="bottom" constant="8" id="U5i-BS-HG8"/>
+                                    <constraint firstItem="33H-bU-7WX" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="Vyv-NA-iFB"/>
+                                    <constraint firstAttribute="trailing" secondItem="2mF-0F-Ndx" secondAttribute="trailing" constant="12" id="WLm-o9-kYX"/>
+                                    <constraint firstItem="o80-7e-l44" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="c2F-uM-PGg"/>
+                                    <constraint firstItem="KJg-Hy-NWq" firstAttribute="top" secondItem="xdZ-qK-n9d" secondAttribute="bottom" constant="8" id="cOS-fk-3ne"/>
+                                    <constraint firstItem="xca-un-uGH" firstAttribute="top" secondItem="frc-n6-pge" secondAttribute="bottom" constant="8" id="gNJ-ZC-7F5"/>
+                                    <constraint firstAttribute="trailing" secondItem="xca-un-uGH" secondAttribute="trailing" constant="16" id="ggJ-v6-JAS"/>
+                                    <constraint firstAttribute="trailing" secondItem="KJg-Hy-NWq" secondAttribute="trailing" constant="16" id="iMa-fa-RRm"/>
+                                    <constraint firstAttribute="trailing" secondItem="33H-bU-7WX" secondAttribute="trailing" constant="16" id="igl-4X-2rb"/>
+                                    <constraint firstItem="A1k-Sl-POy" firstAttribute="leading" secondItem="ta2-Hj-X6m" secondAttribute="trailing" constant="8" id="j4T-Vh-p7c"/>
+                                    <constraint firstItem="3Rq-2g-i66" firstAttribute="top" secondItem="o80-7e-l44" secondAttribute="bottom" constant="8" id="jQ0-qf-h9q"/>
+                                    <constraint firstAttribute="trailing" secondItem="xdZ-qK-n9d" secondAttribute="trailing" constant="16" id="k2Y-XS-oWA"/>
+                                    <constraint firstItem="A1k-Sl-POy" firstAttribute="centerY" secondItem="ta2-Hj-X6m" secondAttribute="centerY" id="lEi-0F-Ib9"/>
+                                    <constraint firstAttribute="bottom" secondItem="KJg-Hy-NWq" secondAttribute="bottom" constant="20" id="m2K-cy-pHH"/>
+                                    <constraint firstItem="ta2-Hj-X6m" firstAttribute="top" secondItem="cA8-dD-UMa" secondAttribute="top" constant="16" id="mGg-eC-nym"/>
+                                    <constraint firstItem="xdZ-qK-n9d" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="pHQ-yf-bqL"/>
+                                    <constraint firstAttribute="trailing" secondItem="o80-7e-l44" secondAttribute="trailing" constant="16" id="qZt-Az-2fX"/>
+                                    <constraint firstItem="2mF-0F-Ndx" firstAttribute="centerY" secondItem="A1k-Sl-POy" secondAttribute="centerY" id="qcd-HQ-vt1"/>
+                                    <constraint firstItem="frc-n6-pge" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="sRs-Ju-1Ep"/>
+                                    <constraint firstItem="ta2-Hj-X6m" firstAttribute="leading" secondItem="cA8-dD-UMa" secondAttribute="leading" constant="16" id="z7Y-3B-Cq4"/>
+                                    <constraint firstItem="frc-n6-pge" firstAttribute="top" secondItem="3Rq-2g-i66" secondAttribute="bottom" constant="8" id="zCX-jq-aEe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.50494970029999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cA8-dD-UMa" firstAttribute="top" secondItem="1Ue-rT-llt" secondAttribute="top" priority="750" constant="100" id="EnW-AN-GxR"/>
+                            <constraint firstAttribute="bottom" secondItem="cA8-dD-UMa" secondAttribute="bottom" constant="-10" id="hKK-4p-8mD"/>
+                            <constraint firstAttribute="trailing" secondItem="cA8-dD-UMa" secondAttribute="trailing" id="hPy-HP-1Gg"/>
+                            <constraint firstItem="cA8-dD-UMa" firstAttribute="leading" secondItem="Wp3-7F-FUj" secondAttribute="leading" id="qM1-mu-guU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ue-rT-llt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="FM8-mo-3zx"/>
+                    <connections>
+                        <outlet property="logOutBtn" destination="KJg-Hy-NWq" id="GFb-YM-CHT"/>
+                        <outlet property="reportBtn" destination="frc-n6-pge" id="Ctj-FB-amP"/>
+                        <outlet property="settingBtn" destination="xca-un-uGH" id="48j-zO-Ghn"/>
+                        <outlet property="shareBtn" destination="xdZ-qK-n9d" id="aBv-sI-VBG"/>
+                        <outlet property="userImage" destination="ta2-Hj-X6m" id="xSG-x3-Ikv"/>
+                        <outlet property="userName" destination="A1k-Sl-POy" id="9eZ-E5-9uN"/>
+                        <outlet property="viewPop" destination="cA8-dD-UMa" id="aN1-EF-oCc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7O-3c-cQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1045.5999999999999" y="3150"/>
+        </scene>
+        <!--ReferralVC-->
+        <scene sceneID="ZHL-sN-nnn">
+            <objects>
+                <viewController storyboardIdentifier="ReferralVC" id="pBb-nW-T2R" customClass="ReferralVC" customModule="Outdoor360" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h81-XJ-jrG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-O5-EXG" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="32" y="408" width="256" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8pV-VD-Ivz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Share Outdoors360 App"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareAppLink:" destination="pBb-nW-T2R" eventType="touchUpInside" id="KZq-tq-Atc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outdoor_header" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-0g-7Oh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IRy-fp-YT0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread the Love for the Outdoors. Share Outdoors360 with friends and family." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5r-Cn-96O">
+                                <rect key="frame" x="16" y="288" width="288" height="72"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Blue"/>
+                        <constraints>
+                            <constraint firstItem="kpl-0g-7Oh" firstAttribute="leading" secondItem="Ar8-vu-3mR" secondAttribute="leading" id="4bF-nv-fhc"/>
+                            <constraint firstItem="kpl-0g-7Oh" firstAttribute="top" secondItem="Ar8-vu-3mR" secondAttribute="top" id="BsL-4W-pIf"/>
+                            <constraint firstItem="Ar8-vu-3mR" firstAttribute="trailing" secondItem="C5r-Cn-96O" secondAttribute="trailing" constant="16" id="IM6-Yj-fc9"/>
+                            <constraint firstItem="zkW-O5-EXG" firstAttribute="leading" secondItem="Ar8-vu-3mR" secondAttribute="leading" constant="32" id="PCe-07-Kfe"/>
+                            <constraint firstItem="C5r-Cn-96O" firstAttribute="centerX" secondItem="h81-XJ-jrG" secondAttribute="centerX" id="VlJ-qk-8D5"/>
+                            <constraint firstItem="Ar8-vu-3mR" firstAttribute="bottom" secondItem="zkW-O5-EXG" secondAttribute="bottom" constant="120" id="X4H-50-iiq"/>
+                            <constraint firstItem="Ar8-vu-3mR" firstAttribute="trailing" secondItem="kpl-0g-7Oh" secondAttribute="trailing" id="Y4x-bP-Dfu"/>
+                            <constraint firstItem="C5r-Cn-96O" firstAttribute="centerY" secondItem="h81-XJ-jrG" secondAttribute="centerY" constant="40" id="gV4-6W-CNR"/>
+                            <constraint firstItem="C5r-Cn-96O" firstAttribute="leading" secondItem="Ar8-vu-3mR" secondAttribute="leading" constant="16" id="hTN-td-FAa"/>
+                            <constraint firstItem="Ar8-vu-3mR" firstAttribute="trailing" secondItem="zkW-O5-EXG" secondAttribute="trailing" constant="32" id="hqr-za-ynN"/>
+                            <constraint firstItem="zkW-O5-EXG" firstAttribute="centerX" secondItem="h81-XJ-jrG" secondAttribute="centerX" id="nyQ-XR-Bor"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ar8-vu-3mR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hmm-pR-wxR">
+                        <barButtonItem key="leftBarButtonItem" image="back" width="63" id="lZU-DO-eeg">
+                            <inset key="imageInsets" minX="-16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="back:" destination="pBb-nW-T2R" id="4Xe-nJ-Hi7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareAppLinkBtn" destination="zkW-O5-EXG" id="Cbl-d4-KaD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WcU-E4-c4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.875" y="3150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ggD-Zk-M9p">
+            <objects>
+                <navigationController storyboardIdentifier="ref" automaticallyAdjustsScrollViewInsets="NO" id="eEb-J1-4Fb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Hrf-lb-PNv">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Blue"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pBb-nW-T2R" kind="relationship" relationship="rootViewController" id="SlN-kb-pOW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h91-ni-MNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200.625" y="3150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="417" height="333"/>
+        <image name="back" width="12" height="23"/>
+        <image name="big_cancel" width="18" height="18"/>
+        <image name="home" width="24" height="24"/>
+        <image name="logout" width="20" height="22"/>
+        <image name="outdoor_header" width="1920" height="1212"/>
+        <image name="report" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
+        <image name="shareLink" width="22" height="22"/>
+        <image name="story-1" width="24" height="24"/>
+        <image name="trip" width="24" height="24"/>
+        <namedColor name="Blue">
+            <color red="0.070588235294117646" green="0.078431372549019607" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSansStd-Bold.otf">
+            <string>GillSansStd-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Image_Cell" rowHeight="250" id="KGk-i7-Jjw" customClass="Image_Cell" customModule="Outdoor360" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outdoor_header" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-55-Lma">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="250.5"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.23137254900000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="Rbh-jY-FzA"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-xO-J1P" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="78" y="106.5" width="200" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="9gI-n6-lzv"/>
+                            <constraint firstAttribute="width" constant="200" id="Wz8-4K-Wto"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="GillSansStd-Bold" family="Gill Sans Std" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="-3"/>
+                        <inset key="imageEdgeInsets" minX="150" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="Search Trips" image="search">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dmA-55-Lma" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1ug-6k-qZM"/>
+                    <constraint firstAttribute="trailing" secondItem="dmA-55-Lma" secondAttribute="trailing" id="LNY-7O-Xpf"/>
+                    <constraint firstAttribute="bottom" secondItem="dmA-55-Lma" secondAttribute="bottom" id="Tjt-Zy-nQl"/>
+                    <constraint firstItem="Egn-xO-J1P" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="1.25" id="emt-SA-ncr"/>
+                    <constraint firstItem="Egn-xO-J1P" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="2" id="mGa-zj-Wyt"/>
+                    <constraint firstItem="dmA-55-Lma" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oH1-0z-RxS"/>
+                    <constraint firstAttribute="trailing" secondItem="dmA-55-Lma" secondAttribute="trailing" id="pzo-X6-CRM"/>
+                    <constraint firstItem="dmA-55-Lma" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sYk-T5-JWj"/>
+                    <constraint firstItem="dmA-55-Lma" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wsz-JW-5Dc"/>
+                    <constraint firstAttribute="bottom" secondItem="dmA-55-Lma" secondAttribute="bottom" id="zZs-DS-rln"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="searchButton" destination="Egn-xO-J1P" id="mLk-vz-57b"/>
+            </connections>
+            <point key="canvasLocation" x="361.875" y="-7.394366197183099"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="outdoor_header" width="1920" height="1212"/>
+        <image name="search" width="24" height="24"/>
+    </resources>
+</document>

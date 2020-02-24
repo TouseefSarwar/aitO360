@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vid" rowHeight="304" id="KGk-i7-Jjw" customClass="VideoProfileTableViewCell" customModule="Outdoor360" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="304"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="303.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="12:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-dC-NGS">
+                        <rect key="frame" x="56" y="41" width="51" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touseef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd5-Tp-eNV">
+                        <rect key="frame" x="56" y="23" width="56" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TsQ-7e-4f6" customClass="ImageViewX" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="8" y="15" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Iop-a1-v0b"/>
+                            <constraint firstAttribute="height" constant="40" id="cAO-yp-M9G"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="pulseDelay">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-28-qER" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="314" y="15" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="bqA-hc-hLa"/>
+                            <constraint firstAttribute="height" constant="35" id="gDT-le-kgq"/>
+                        </constraints>
+                        <state key="normal" image="moreArrow"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="morBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wAk-uO-TZm"/>
+                        </connections>
+                    </button>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-Ha-rOJ" customClass="ViewX" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="286.5" width="355" height="45"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-f6-lcS" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="33" y="18" width="20" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-AR-kBQ" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="374" y="18" width="25" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-tw-Y1G" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="82" y="18" width="20" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3i4-N8-sBH" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="133" y="18" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-cf-jSJ" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="8" y="0.0" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Unlike">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="likeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YZq-yR-8eA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-Kr-Vbn" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="57" y="0.0" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="comment">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="commentBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="817-qc-uUk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqE-aL-LnP">
+                                <rect key="frame" x="110" y="0.0" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="tag"/>
+                                <connections>
+                                    <action selector="tagBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="URj-rK-1TL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-Q0-A4f" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="312" y="0.0" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share">
+                                    <color key="titleColor" red="0.79165226219999996" green="0.27536496519999998" blue="0.18505173920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hoP-1r-NOM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="qnl-j3-5q6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Khp-AR-kBQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWb-hr-Hpc">
+                        <rect key="frame" x="0.0" y="291" width="357" height="12"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="8pO-se-yQV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aXF-Nx-p6T"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ue-yZ-Bv5" customClass="AGVideoPlayerView" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="63" width="357" height="220"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="220" id="yaE-CF-h9A"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jvh-Ha-rOJ" secondAttribute="trailing" id="2AN-7j-ysZ"/>
+                    <constraint firstItem="TsQ-7e-4f6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="7Ke-gL-81r"/>
+                    <constraint firstItem="g2N-28-qER" firstAttribute="leading" secondItem="b3r-dC-NGS" secondAttribute="trailing" priority="750" constant="207" id="BxM-tG-DeQ"/>
+                    <constraint firstItem="pd5-Tp-eNV" firstAttribute="leading" secondItem="TsQ-7e-4f6" secondAttribute="trailing" constant="8" id="MZD-yT-Kf4"/>
+                    <constraint firstItem="7Ue-yZ-Bv5" firstAttribute="top" secondItem="TsQ-7e-4f6" secondAttribute="bottom" constant="8" id="RcI-QZ-gna"/>
+                    <constraint firstItem="g2N-28-qER" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Rrs-2Q-6z9"/>
+                    <constraint firstItem="b3r-dC-NGS" firstAttribute="leading" secondItem="TsQ-7e-4f6" secondAttribute="trailing" constant="8" id="SaR-Qd-1pC"/>
+                    <constraint firstItem="b3r-dC-NGS" firstAttribute="top" secondItem="pd5-Tp-eNV" secondAttribute="bottom" constant="1" id="Sez-fG-s2r"/>
+                    <constraint firstAttribute="bottom" secondItem="uWb-hr-Hpc" secondAttribute="bottom" id="YXG-Do-LOi"/>
+                    <constraint firstItem="g2N-28-qER" firstAttribute="leading" secondItem="pd5-Tp-eNV" secondAttribute="trailing" priority="750" constant="202" id="aBa-8q-1qz"/>
+                    <constraint firstItem="pd5-Tp-eNV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="d1D-NF-nR8"/>
+                    <constraint firstItem="jvh-Ha-rOJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eYx-td-7bZ"/>
+                    <constraint firstAttribute="trailing" secondItem="g2N-28-qER" secondAttribute="trailing" constant="8" id="fb0-To-p6a"/>
+                    <constraint firstItem="uWb-hr-Hpc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gvP-BX-Dv1"/>
+                    <constraint firstAttribute="trailing" secondItem="uWb-hr-Hpc" secondAttribute="trailing" id="hxg-NK-SeJ"/>
+                    <constraint firstAttribute="trailing" secondItem="7Ue-yZ-Bv5" secondAttribute="trailing" id="iJR-gW-M1C"/>
+                    <constraint firstItem="TsQ-7e-4f6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lVw-xf-eNE"/>
+                    <constraint firstItem="7Ue-yZ-Bv5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oIX-Ms-Vl9"/>
+                    <constraint firstItem="jvh-Ha-rOJ" firstAttribute="top" secondItem="7Ue-yZ-Bv5" secondAttribute="bottom" constant="8" id="p1s-Oc-rII"/>
+                    <constraint firstItem="uWb-hr-Hpc" firstAttribute="top" secondItem="7Ue-yZ-Bv5" secondAttribute="bottom" constant="8" id="s2C-Om-2wA"/>
+                    <constraint firstItem="uWb-hr-Hpc" firstAttribute="top" secondItem="jvh-Ha-rOJ" secondAttribute="bottom" constant="8" id="slP-1p-IiR"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="jvh-Ha-rOJ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="comment" destination="Kkg-Kr-Vbn" id="kHX-Gr-lBz"/>
+                <outlet property="commentCount" destination="iPU-tw-Y1G" id="Kgt-n9-4jm"/>
+                <outlet property="like" destination="iyy-cf-jSJ" id="foL-As-JuL"/>
+                <outlet property="likeCount" destination="hwh-f6-lcS" id="aRV-6u-fL4"/>
+                <outlet property="more_btn" destination="g2N-28-qER" id="W2W-UH-Fwg"/>
+                <outlet property="tagB" destination="ZqE-aL-LnP" id="Fmn-gp-Wmk"/>
+                <outlet property="tagCount" destination="3i4-N8-sBH" id="Jpd-lp-F8x"/>
+                <outlet property="time" destination="b3r-dC-NGS" id="yPn-6U-Vs2"/>
+                <outlet property="user_Image" destination="TsQ-7e-4f6" id="uxn-7c-xI2"/>
+                <outlet property="user_Name" destination="pd5-Tp-eNV" id="y0S-Up-dVx"/>
+                <outlet property="videoProfileView" destination="7Ue-yZ-Bv5" id="sNf-3m-9KC"/>
+            </connections>
+            <point key="canvasLocation" x="-384.80000000000001" y="-221.28935532233885"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Unlike" width="24" height="22"/>
+        <image name="comment" width="24" height="24"/>
+        <image name="moreArrow" width="18" height="4"/>
+        <image name="share" width="24" height="24"/>
+        <image name="tag" width="24" height="24"/>
+    </resources>
+</document>

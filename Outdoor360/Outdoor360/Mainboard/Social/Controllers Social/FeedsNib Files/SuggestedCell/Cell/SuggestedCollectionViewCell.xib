@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="suggested" id="gTV-IL-0wX" customClass="SuggestedCollectionViewCell" customModule="Outdoor360" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-Om-2S1" customClass="ViewX" customModule="Outdoor360" customModuleProvider="target">
+                        <rect key="frame" x="2" y="2" width="151" height="171"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJT-et-mmm" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="8" y="135" width="135" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="LFA-2g-m3C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <state key="normal" title="Follow">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.018645260483026505" green="0.47766226530075073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="followBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="glD-Gx-4Em"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="siC-1Z-1It" customClass="ImageViewX" customModule="Outdoor360" customModuleProvider="target">
+                                <rect key="frame" x="35" y="8" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="FO0-J5-bL2"/>
+                                    <constraint firstAttribute="width" constant="80" id="HJx-8F-6ox"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-cz-gie">
+                                <rect key="frame" x="8" y="96" width="135" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="yNq-hD-YDm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="siC-1Z-1It" firstAttribute="leading" secondItem="K9j-Om-2S1" secondAttribute="leading" constant="35" id="4s8-ao-rdA"/>
+                            <constraint firstItem="siC-1Z-1It" firstAttribute="top" secondItem="K9j-Om-2S1" secondAttribute="top" constant="8" id="DwD-5V-LMt"/>
+                            <constraint firstItem="gRa-cz-gie" firstAttribute="top" secondItem="siC-1Z-1It" secondAttribute="bottom" constant="8" id="Gka-YH-H77"/>
+                            <constraint firstAttribute="trailing" secondItem="gRa-cz-gie" secondAttribute="trailing" constant="8" id="QeR-9m-aPf"/>
+                            <constraint firstItem="cJT-et-mmm" firstAttribute="leading" secondItem="K9j-Om-2S1" secondAttribute="leading" constant="8" id="ZVd-qS-Ijb"/>
+                            <constraint firstAttribute="trailing" secondItem="siC-1Z-1It" secondAttribute="trailing" constant="36" id="npc-OV-zve"/>
+                            <constraint firstAttribute="trailing" secondItem="cJT-et-mmm" secondAttribute="trailing" constant="8" id="pMB-BQ-zyr"/>
+                            <constraint firstAttribute="bottom" secondItem="cJT-et-mmm" secondAttribute="bottom" constant="12" id="uhQ-ja-I0V"/>
+                            <constraint firstItem="gRa-cz-gie" firstAttribute="leading" secondItem="K9j-Om-2S1" secondAttribute="leading" constant="8" id="xEx-a5-mZX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="K9j-Om-2S1" secondAttribute="bottom" constant="2" id="CVG-Jw-z2Z"/>
+                <constraint firstAttribute="trailing" secondItem="K9j-Om-2S1" secondAttribute="trailing" constant="2" id="Ra3-QZ-O0h"/>
+                <constraint firstItem="K9j-Om-2S1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Y42-Os-uBs"/>
+                <constraint firstItem="K9j-Om-2S1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="pht-RQ-nwd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="155" height="175"/>
+            <connections>
+                <outlet property="followBtn" destination="cJT-et-mmm" id="lXA-hY-LyE"/>
+                <outlet property="name" destination="gRa-cz-gie" id="vG3-Uo-Qee"/>
+                <outlet property="pro_img" destination="siC-1Z-1It" id="u9E-mY-gFf"/>
+            </connections>
+            <point key="canvasLocation" x="-535.20000000000005" y="19.340329835082461"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeholderImage" width="80" height="80"/>
+    </resources>
+</document>

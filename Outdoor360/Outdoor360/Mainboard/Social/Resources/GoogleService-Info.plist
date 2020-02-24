@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>260022084317-1bcfcsahmtiirmr5ck3ft9l0q6rkbo7h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.260022084317-1bcfcsahmtiirmr5ck3ft9l0q6rkbo7h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDaB6Maex92zIOK9jgHoNba5LixPY8fI0Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>260022084317</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Yentna.Outdoor360</string>
+	<key>PROJECT_ID</key>
+	<string>yentna-1569871062983</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yentna-1569871062983.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:260022084317:ios:89ea5b9b738d7005733134</string>
+	<key>DATABASE_URL</key>
+	<string>https://yentna-1569871062983.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Activity" customModule="Outdoor360" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="161"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Lp-97-eWa" customClass="ViewX" customModule="Outdoor360" customModuleProvider="target">
+                    <rect key="frame" x="29" y="30.5" width="150" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oxO-8h-D6r">
+                            <rect key="frame" x="33" y="27" width="84.5" height="46"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="rde-Ur-z5s">
+                                    <rect key="frame" x="32" y="0.0" width="20" height="20"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj8-vC-Bcv">
+                                    <rect key="frame" x="0.0" y="28" width="84.5" height="18"/>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="15"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="oxO-8h-D6r" firstAttribute="centerX" secondItem="4Lp-97-eWa" secondAttribute="centerX" id="66j-II-4hp"/>
+                        <constraint firstItem="oxO-8h-D6r" firstAttribute="centerY" secondItem="4Lp-97-eWa" secondAttribute="centerY" id="E7a-Qz-FzU"/>
+                        <constraint firstItem="oxO-8h-D6r" firstAttribute="centerY" secondItem="4Lp-97-eWa" secondAttribute="centerY" id="Evi-Tk-Iz2"/>
+                        <constraint firstAttribute="height" constant="100" id="Fqe-Hc-oW8"/>
+                        <constraint firstAttribute="width" constant="150" id="USI-5Y-hM4"/>
+                        <constraint firstItem="oxO-8h-D6r" firstAttribute="centerX" secondItem="4Lp-97-eWa" secondAttribute="centerX" id="ghh-ns-FRw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.49788182218309857" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Lp-97-eWa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bjc-xP-2N3"/>
+                <constraint firstItem="4Lp-97-eWa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PK6-Lt-9NO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="5.625" y="-198.06338028169014"/>
+        </view>
+    </objects>
+</document>

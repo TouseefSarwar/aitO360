@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSansStd-Bold.otf">
+            <string>GillSansStd-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VsY-S0-CzI" customClass="HeaderDash" customModule="Outdoor360" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ect-fH-Xyp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-GF-6fQ">
+                            <rect key="frame" x="134.5" y="17.5" width="51.5" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="54R-jX-uc5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GillSansStd-Bold" family="Gill Sans Std" pointSize="20"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Dcy-GF-6fQ" firstAttribute="centerX" secondItem="ect-fH-Xyp" secondAttribute="centerX" id="k7i-jk-8Zd"/>
+                        <constraint firstItem="Dcy-GF-6fQ" firstAttribute="centerY" secondItem="ect-fH-Xyp" secondAttribute="centerY" id="sGa-kx-K6G"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ect-fH-Xyp" secondAttribute="trailing" id="UlL-dn-Ax4"/>
+                <constraint firstItem="ect-fH-Xyp" firstAttribute="top" secondItem="0nr-XN-v0z" secondAttribute="top" id="WvS-AJ-54x"/>
+                <constraint firstItem="ect-fH-Xyp" firstAttribute="leading" secondItem="0nr-XN-v0z" secondAttribute="leading" id="ZJT-RU-JSn"/>
+                <constraint firstAttribute="bottom" secondItem="ect-fH-Xyp" secondAttribute="bottom" id="gzf-8u-TMl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0nr-XN-v0z"/>
+            <connections>
+                <outlet property="headerLabel" destination="Dcy-GF-6fQ" id="Eli-FF-VCr"/>
+            </connections>
+            <point key="canvasLocation" x="108.75" y="-156.33802816901408"/>
+        </view>
+    </objects>
+</document>

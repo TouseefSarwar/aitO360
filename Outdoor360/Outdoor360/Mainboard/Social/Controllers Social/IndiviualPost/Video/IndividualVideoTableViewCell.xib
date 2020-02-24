@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="singleVideo" rowHeight="378" id="KGk-i7-Jjw" customClass="IndividualVideoTableViewCell" customModule="Yentna_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="378"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="377.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYY-YM-bO1">
+                        <rect key="frame" x="65" y="35" width="50" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cju-GN-Zfq" customClass="ImageViewX" customModule="Yentna_App" customModuleProvider="target">
+                        <rect key="frame" x="7" y="11" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="IiC-Uc-STu"/>
+                            <constraint firstAttribute="height" constant="50" id="W4B-Eu-2Sr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B52-JV-tBv">
+                        <rect key="frame" x="65" y="18" width="37" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvI-5O-arw" customClass="AGVideoPlayerView" customModule="Yentna_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="69" width="320" height="242"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="242" id="twi-1s-dRh"/>
+                        </constraints>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-aA-l0a" customClass="ViewX" customModule="Yentna_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="319" width="320" height="40"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-w8-hyX" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="277" y="2" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share">
+                                    <color key="titleColor" red="0.79165226219999996" green="0.27536496519999998" blue="0.18505173920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZI-RS-zie" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="8" y="3" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Unlike">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19a-h5-688" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="63" y="3" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="comment">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql6-Ot-Dm4" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="249" y="14" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-Eb-L63" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="32" y="22" width="25" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19N-nl-TRj" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="89" y="22" width="25" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouk-q6-OwS">
+                                <rect key="frame" x="120" y="3" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="tag"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st1-Cl-Ece" customClass="ButtonY" customModule="Yentna_App" customModuleProvider="target">
+                                <rect key="frame" x="142" y="22" width="25" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <state key="normal" title="12k">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="R5k-5b-gqC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ql6-Ot-Dm4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-Ly-Odc">
+                        <rect key="frame" x="0.0" y="367" width="320" height="10"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aAh-Ly-Odc" secondAttribute="bottom" constant="0.5" id="2KC-0D-zDa"/>
+                    <constraint firstAttribute="trailing" secondItem="aAh-Ly-Odc" secondAttribute="trailing" id="3YD-Ux-top"/>
+                    <constraint firstItem="fYY-YM-bO1" firstAttribute="leading" secondItem="cju-GN-Zfq" secondAttribute="trailing" constant="8" id="6s0-gW-nkV"/>
+                    <constraint firstItem="cqA-aA-l0a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="83d-Uq-GXU"/>
+                    <constraint firstItem="fYY-YM-bO1" firstAttribute="top" secondItem="B52-JV-tBv" secondAttribute="bottom" id="Fru-fb-QWy"/>
+                    <constraint firstItem="cqA-aA-l0a" firstAttribute="top" secondItem="mvI-5O-arw" secondAttribute="bottom" constant="8" id="L01-yi-oz1"/>
+                    <constraint firstItem="aAh-Ly-Odc" firstAttribute="top" secondItem="cqA-aA-l0a" secondAttribute="bottom" constant="8" id="MfI-gV-xdV"/>
+                    <constraint firstItem="aAh-Ly-Odc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SSS-nf-wbk"/>
+                    <constraint firstAttribute="trailing" secondItem="mvI-5O-arw" secondAttribute="trailing" id="Taf-bh-uDv"/>
+                    <constraint firstItem="cqA-aA-l0a" firstAttribute="top" secondItem="mvI-5O-arw" secondAttribute="bottom" constant="8" id="U2d-u7-l12"/>
+                    <constraint firstItem="B52-JV-tBv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="Vqt-dx-dJ1"/>
+                    <constraint firstItem="cju-GN-Zfq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="ace-OI-GqU"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="B52-JV-tBv" secondAttribute="trailing" constant="202" id="eeW-HY-OLP"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fYY-YM-bO1" secondAttribute="trailing" constant="189" id="fZc-7U-oxL"/>
+                    <constraint firstItem="mvI-5O-arw" firstAttribute="top" secondItem="cju-GN-Zfq" secondAttribute="bottom" constant="8" id="hN0-ei-dwn"/>
+                    <constraint firstAttribute="trailing" secondItem="cqA-aA-l0a" secondAttribute="trailing" id="jOz-l8-iGF"/>
+                    <constraint firstItem="B52-JV-tBv" firstAttribute="leading" secondItem="cju-GN-Zfq" secondAttribute="trailing" constant="8" id="lPZ-Uv-Ynd"/>
+                    <constraint firstItem="aAh-Ly-Odc" firstAttribute="top" secondItem="cqA-aA-l0a" secondAttribute="bottom" constant="8" id="p7s-eN-QJy"/>
+                    <constraint firstItem="cju-GN-Zfq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="uMj-7l-nLt"/>
+                    <constraint firstItem="mvI-5O-arw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xNg-rw-aqM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="comment_Btn" destination="19a-h5-688" id="f1Z-vP-CA4"/>
+                <outlet property="comment_Count" destination="19N-nl-TRj" id="ouL-cp-MCB"/>
+                <outlet property="like_Btn" destination="8ZI-RS-zie" id="qro-pw-34t"/>
+                <outlet property="like_Count" destination="Kev-Eb-L63" id="mOM-rO-ZOF"/>
+                <outlet property="name" destination="B52-JV-tBv" id="YHU-Nt-aYI"/>
+                <outlet property="pro_Image" destination="cju-GN-Zfq" id="3i3-RI-2uj"/>
+                <outlet property="share_Btn" destination="Q2H-w8-hyX" id="JWX-2U-o4M"/>
+                <outlet property="tag_Btn" destination="ouk-q6-OwS" id="Dn1-W8-mce"/>
+                <outlet property="tag_Count" destination="st1-Cl-Ece" id="mHp-wr-heX"/>
+                <outlet property="time" destination="fYY-YM-bO1" id="Z2O-e2-eKh"/>
+                <outlet property="videoView" destination="mvI-5O-arw" id="Cfx-lx-RFC"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="71"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Unlike" width="24" height="22"/>
+        <image name="comment" width="24" height="24"/>
+        <image name="share" width="24" height="24"/>
+        <image name="tag" width="24" height="24"/>
+    </resources>
+</document>
