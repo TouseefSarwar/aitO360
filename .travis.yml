@@ -8,4 +8,4 @@ addons:
     
     
 script:
-    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://21d5fe7f15386caf6eb4d944d973e8eb8a0c9ec3\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://4422aeece1a7e439264d3573e6e8acacb4ad3f98\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"touseefiosdev1:tsKsjvTpmoyh86zyH9nb\""
+    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://21d5fe7f15386caf6eb4d944d973e8eb8a0c9ec3\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://7d74a5c945038ac2e9b0920b1b6c8a42b680febf\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"touseefiosdev1:tsKsjvTpmoyh86zyH9nb\""
