@@ -77,7 +77,7 @@ class PopupViewController: UIViewController {
 //            }
         }else{
 //            if self.title == "Game"{
-                let str = self.game.joined(separator: ",")
+                let str = self.game.joined(separator: "," )
                 PostUpdateGlobal.g_games[index!] = str
 //                self.delegate.Total_Games_Species(count: self.game.count, index:  index)
 //                self.dismiss(animated: true, completion: nil)
@@ -207,7 +207,6 @@ extension PopupViewController : UITableViewDelegate, UITableViewDataSource{
                     cell.accessoryType = .none
                 }
             }
-            
                 
 //            }else{
 //                cell.lbl.text = self.filter_Species[indexPath.row]

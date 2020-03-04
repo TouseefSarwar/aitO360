@@ -85,8 +85,7 @@ class CreateHeader: UIView ,TLPhotosPickerViewControllerDelegate {
         self.delegate.linkDismissed()
     }
     
-    @IBAction func setting(_ sender: Any) {
-    }
+    
 
     //Tag people Button....
     @IBAction func to_see(_ sender: Any) {

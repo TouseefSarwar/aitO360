@@ -39,7 +39,7 @@ class LoginTwitter: XCTestCase {
             }
             return false
         }
-
+        app.tap()
         if signInButton.exists{
             XCTAssertTrue(signInButton.exists)
             signInButton.tap()

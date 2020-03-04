@@ -30,6 +30,7 @@ class MobileViewController: UIViewController {
         mobile_text.flagSize = CGSize(width: 24, height: 24)
         mobile_text.enablePlusPrefix = false
         mobile_text.customPhoneFormats = ["US" : "(###) ###-####", "PK" : "(###) ### ####",]
+        mobile_text.becomeFirstResponder()
     }
 
 }

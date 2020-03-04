@@ -1,0 +1,132 @@
+//
+//  Notifications.swift
+//  Notifications
+//
+//  Created by Touseef Sarwar on 04/03/2020.
+//  Copyright © 2020 Touseef Sarwar. All rights reserved.
+//
+
+import XCTest
+
+class Notifications: XCTestCase {
+
+    override func setUp() {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        // In UI tests it is usually best to stop immediately when a failure occurs.
+        continueAfterFailure = false
+
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let signInButton = app.buttons["SIGN IN"]
+        sleep(15)
+        addUIInterruptionMonitor(withDescription: "“Outdoors360” Would Like to Send You Notifications"){ alert in
+            if alert.buttons["Allow"].exists{
+                alert.buttons["Allow"].tap()
+                return true
+            }
+            return false
+        }
+        //TODO: Uncomment tap when run on browserStack.
+//        app.tap()
+        let doneButton = app.toolbars["Toolbar"].buttons["Done"]
+        if signInButton.exists{
+            XCTAssertTrue(signInButton.exists)
+            signInButton.tap()
+            let elementsQuery = app.scrollViews.otherElements
+            let emailTextField = elementsQuery.textFields["Email"]
+            XCTAssertTrue(emailTextField.exists)
+            emailTextField.tap()
+            emailTextField.typeText("jcgalleries.testemail1@gmail.com")
+            let passwordTextField = elementsQuery.secureTextFields["Password"]
+            XCTAssertTrue(passwordTextField.exists)
+            passwordTextField.tap()
+            passwordTextField.typeText("123456")
+            
+            XCTAssertTrue(doneButton.exists)
+            doneButton.tap()
+            let loginButton = elementsQuery.buttons["Login"]
+            XCTAssertTrue(loginButton.exists)
+            loginButton.tap()
+        }
+        sleep(10)
+        
+        app.tabBars.buttons["Notifications"].tap()
+        let notTable = app.tables.matching(identifier: "notificationTable")
+        notTable.cells["cell_no_0"].staticTexts["typeNotification"].tap()
+        sleep(10)
+       
+       
+        let notPostBack = app.navigationBars["Outdoor360.NotificationPostsView"].buttons["Notifications"]
+        let backProfile = app.navigationBars["Outdoor360.OthersView"].children(matching: .button).element
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backProfile, handler: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+        if notPostBack.exists{
+            notPostBack.tap()
+        }else{
+            backProfile.tap()
+        }
+        
+       
+       
+        notTable.cells["cell_no_0"].images["userImage"].tap()
+        sleep(10)
+        backProfile.tap()
+       
+       
+        notTable.cells["cell_no_0"].buttons["userName"].tap()
+        sleep(10)
+        backProfile.tap()
+       
+       
+        notTable.cells["cell_no_1"].staticTexts["typeNotification"].tap()
+        sleep(10)
+        
+        if notPostBack.exists{
+            notPostBack.tap()
+        }else{
+            backProfile.tap()
+        }
+        
+       
+        notTable.cells["cell_no_1"].images["userImage"].tap()
+        sleep(10)
+        backProfile.tap()
+       
+       
+        notTable.cells["cell_no_1"].buttons["userName"].tap()
+        sleep(10)
+        backProfile.tap()
+        
+        
+        notTable.cells["cell_no_3"].staticTexts["typeNotification"].tap()
+        sleep(10)
+        
+        if notPostBack.exists{
+            notPostBack.tap()
+        }else{
+            backProfile.tap()
+        }
+        notTable.cells["cell_no_3"].images["userImage"].tap()
+        sleep(10)
+        backProfile.tap()
+        
+        notTable.cells["cell_no_3"].buttons["userName"].tap()
+        sleep(10)
+        backProfile.tap()
+        
+        
+    }
+}

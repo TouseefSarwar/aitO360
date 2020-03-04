@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,12 +13,13 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="173" id="KGk-i7-Jjw" customClass="PhotoCellTableViewCell" customModule="Outdoor360" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="358" height="173"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="358" height="172.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="173"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpr-9Y-TAD" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
                         <rect key="frame" x="136" y="83" width="35" height="35"/>
+                        <accessibility key="accessibilityConfiguration" identifier="speciesTag"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="Xn4-3i-e6b"/>
                             <constraint firstAttribute="width" constant="35" id="vB0-RB-qtH"/>
@@ -44,6 +43,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-0d-PMH" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
                         <rect key="frame" x="136" y="47" width="35" height="35"/>
+                        <accessibility key="accessibilityConfiguration" identifier="peopleTag"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="Fnb-d4-bOk"/>
                             <constraint firstAttribute="height" constant="35" id="Hst-lZ-kno"/>
@@ -67,6 +67,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0g-U1-MMH" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
                         <rect key="frame" x="136" y="11" width="35" height="35"/>
+                        <accessibility key="accessibilityConfiguration" identifier="location"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="MRq-fx-G7H"/>
                             <constraint firstAttribute="height" constant="35" id="U7F-PP-UJl"/>
@@ -97,13 +98,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Location Specified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWG-eg-LS2">
-                        <rect key="frame" x="175" y="21.5" width="159" height="14.5"/>
+                        <rect key="frame" x="175" y="21.5" width="160" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Species Tagged" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cu-qO-OR4">
-                        <rect key="frame" x="175" y="93.5" width="159" height="14.5"/>
+                        <rect key="frame" x="175" y="93.5" width="160" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -116,13 +117,14 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No People Tagged" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-ja-Tv7">
-                        <rect key="frame" x="175" y="57.5" width="159" height="14.5"/>
+                        <rect key="frame" x="175" y="57.5" width="160" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Xr-M21" customClass="ButtonY" customModule="Outdoor360" customModuleProvider="target">
                         <rect key="frame" x="136" y="119" width="35" height="35"/>
+                        <accessibility key="accessibilityConfiguration" identifier="crop"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="OP2-J1-1FN"/>
                             <constraint firstAttribute="height" constant="35" id="oMS-hr-0nl"/>
@@ -145,7 +147,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crop and Rotate " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNw-Hn-Xj9">
-                        <rect key="frame" x="175" y="129.5" width="159" height="14.5"/>
+                        <rect key="frame" x="175" y="129.5" width="160" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

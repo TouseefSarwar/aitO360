@@ -17,6 +17,28 @@ import SnapKit
 
 class CreatePostViewController: UIViewController , UINavigationControllerDelegate{
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var user_image : ImageViewX!
+    @IBOutlet weak var post_caption : UITextView!
+    @IBOutlet weak var album_title : UITextField!
+    @IBOutlet weak var postTagCount : UILabel!
+    @IBOutlet weak var cameraBtn : UIButton!
+    
+    //Preview Link Outlets...
+    @IBOutlet weak var linkView : UIView!
+    @IBOutlet weak var linkImage : UIImageView!
+    @IBOutlet weak var linkTitle : UILabel!
+    @IBOutlet weak var linkDescription : UILabel!
+    @IBOutlet weak var linkURL : UILabel!
+    @IBOutlet weak var linkClose : UIButton!
+    
+    
+    /// This var is used to send the url of link image in parameter in service call.
+    var linkImageURL : String = ""
+    
+    
     //Variables for tagCount for each Cell..
     var selectedIndex = -1
 //    var tagCount = 0
@@ -27,7 +49,6 @@ class CreatePostViewController: UIViewController , UINavigationControllerDelegat
     var selectedSpeciesIndex : [Int] = []
     var speciesCount : [Int] = []
     
-    
     var species : [String] = [String]() // Fetched Species from API
     var games : [String] = [String]() // Fetched games from API
     var selected_Images : [PickedImages] = [PickedImages]()
@@ -35,39 +56,38 @@ class CreatePostViewController: UIViewController , UINavigationControllerDelegat
     var type : String! // Type to check game or species
     var tag_type : String! // Type to check post tags or photo tags
 
-    @IBOutlet weak var tableView: UITableView!
     
-    
-
-    //IBOulets
 //    
 //    @IBOutlet weak var profile_img: ImageViewX!
 //    @IBOutlet weak var user_Name: UILabel!
 //    @IBOutlet weak var msg_typed_textView: TextViewX!
     var selectedImage: [PickedImages] = [PickedImages]()
     
-    var videoURL : URL?
-    var headerView : CreateHeader!
+//    var videoURL : URL?
+//    var headerView : CreateHeader!
     var is_album : String = "no"
     
     
     ///parameters for linkpreview...
-    var linkURL : String = ""
-    var linkImage : String = ""
-    var linkDesc : String = ""
-    var linkTitle : String = ""
+//    var linkURL : String = ""
+//    var linkImage : String = ""
+//    var linkDesc : String = ""
+//    var linkTitle : String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let total = PostUpdateGlobal.post_tags.split(separator: ",")
-        self.headerView.postTagCount.text  = String(total.count)
+        self.postTagCount.text  = String(total.count)
         tableView.reloadData()
         self.setNavigationColor(colorForNavigation: [#colorLiteral(red: 0.07058823529, green: 0.07843137255, blue: 0.1529411765, alpha: 1),#colorLiteral(red: 0.07058823529, green: 0.07843137255, blue: 0.1529411765, alpha: 1)])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "PhotoCellTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
         //MARK: Fetch species and Games
 //        GetSpecies()
 //        GetGames()
@@ -77,26 +97,26 @@ class CreatePostViewController: UIViewController , UINavigationControllerDelegat
         tableView.isAccessibilityElement = true
         tableView.accessibilityIdentifier = "CreatePostTable"
         
-        headerView = tableView.tableHeaderView as? CreateHeader
-        headerView.delegate = self
-        headerView.post_caption.delegate = self
-        headerView.updateContraintsFor(show: false)
+//        headerView = tableView.tableHeaderView as? CreateHeader
+//        headerView.delegate = self
+        self.post_caption.delegate = self
+//        headerView.updateContraintsFor(show: false)
         let dic = UserDefaults.standard.dictionary(forKey: "userInfo")
         if let img  = dic!["user_image"]{
             NetworkController.user_image = img as! String
             let res = ImageResource(downloadURL: URL(string: (NetworkController.user_image.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))!)!, cacheKey: NetworkController.user_image.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))
-                headerView.user_image.kf.indicatorType = .activity
-                headerView.user_image.kf.setImage(with: res, placeholder: #imageLiteral(resourceName: "placeholderImage"))
+                self.user_image.kf.indicatorType = .activity
+                self.user_image.kf.setImage(with: res, placeholder: #imageLiteral(resourceName: "placeholderImage"))
         }
         
         if self.title == "Create Post"{
             self.is_album = "no"
-            headerView.album_title.isHidden = true
+            self.album_title.isHidden = true
         }else{
             self.is_album = "yes"
         }
         
-        tableView.register(UINib(nibName: "PhotoCellTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -168,17 +188,17 @@ extension CreatePostViewController : TagMoreDelegate , SpeciesDelegates{
 extension CreatePostViewController : UITextViewDelegate{
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if headerView.post_caption.text == "Whats on your mind..."{
-            headerView.post_caption.text = ""
+        if self.post_caption.text == "Whats on your mind..."{
+            self.post_caption.text = ""
         }
-        headerView.post_caption.becomeFirstResponder()
+        self.post_caption.becomeFirstResponder()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if headerView.post_caption.text == "" {
-            headerView.post_caption.text = "Whats on your mind..."
+        if self.post_caption.text == "" {
+            self.post_caption.text = "Whats on your mind..."
         }
-        headerView.post_caption.resignFirstResponder()
+        self.post_caption.resignFirstResponder()
     }
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
@@ -193,34 +213,31 @@ extension CreatePostViewController : UITextViewDelegate{
             if str.isValidURL{
                 let urlString = URL(string: str)!
                 Readability.parse(url: urlString, completion: { data in
-                    self.headerView.updateContraintsFor(show: true)
-                    self.headerView.linkURL.text = str
-                    self.linkURL = str
+                    self.updateContraintsFor(show: true)
+                    self.linkURL.text = str
+//                    self.linkURL = str
                     if  data?.topImage != "" && data?.topImage != nil {
                         let res = ImageResource(downloadURL: URL(string: (data?.topImage!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!)!)
-                        self.headerView.linkImage.kf.indicatorType = .activity
-                        self.headerView.linkImage.kf.setImage(with: res)
-                        self.linkImage = data?.topImage ?? ""
+                        self.linkImage.kf.indicatorType = .activity
+                        self.linkImage.kf.setImage(with: res)
+                        self.linkImageURL = data?.topImage ?? ""
                         
                     }else{
-                        self.headerView.linkImage.image = #imageLiteral(resourceName: "no_image")
+                        self.linkImage.image = #imageLiteral(resourceName: "no_image")
                     }
                     
                     if data?.title != "" && data?.title != nil{
-                        self.headerView.linkTitle.text = (data?.title)!
-                        self.linkTitle = (data?.title)!
+                        self.linkTitle.text = (data?.title)!
+//                        self.linkTitle = (data?.title)!
                     }else{
-                        self.headerView.linkTitle.text = "No Title Available"
+                        self.linkTitle.text = "No Title Available"
                     }
                     if data?.description != "" && data?.description != nil{
-                        self.headerView.linkDescription.text = (data?.description)!
-                        self.linkDesc = (data?.description)!
+                        self.linkDescription.text = (data?.description)!
+//                        self.linkDesc = (data?.description)!
                     }else{
-                        self.headerView.linkDescription.text = "No Description Available"
+                        self.linkDescription.text = "No Description Available"
                     }
-                    
-                    
-                    
                 })
                 
                 break
@@ -245,6 +262,8 @@ extension CreatePostViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PhotoCellTableViewCell
      
+        cell.isAccessibilityElement = true
+        cell.accessibilityIdentifier = "cell_no_\(indexPath.row)"
         let countT = PostUpdateGlobal.photo_tags[indexPath.row].split(separator: ",")
         cell.tag_lbl.text = "\(countT.count) People Tagged"
         
@@ -325,6 +344,7 @@ extension CreatePostViewController : PhotoCellDelegate{
     }
     
     func presentPhoto(viewController: UIViewController) {
+        viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
 
@@ -366,15 +386,38 @@ extension CreatePostViewController : PhotoCellDelegate{
 }
 
 extension CreatePostViewController : CreateHeaderDelegate{
+    func SendPostHeader() {
+        
+    }
+    
+    func linkDismissed() {
+    }
+    
     
     func present(viewController: UIViewController) {
-        self.present(viewController, animated: true, completion: nil)
+        
     }
     
     func ImagesAssets(data: [TLPHAsset]) {
+    }
+    
+    func PerformSegueHeader(identifier: String, type: String) {
+    }
+    
+
+    
+}
+
+//MARK: Header  Things are here
+
+extension CreatePostViewController : TLPhotosPickerViewControllerDelegate{
+    
+    func dismissPhotoPicker(withTLPHAssets: [TLPHAsset]) {
+        // use selected order, fullresolution image
         self.addActivityLoader()
         
-        for i in data{
+        for i in withTLPHAssets{
+            print(i.type)
             if i.type == .video{
                 i.exportVideoFile(options: nil, progressBlock: nil, completionBlock: { (url, str) in
                     let video = PickedImages(image: i.fullResolutionImage, url: url.absoluteURL, type: "video")
@@ -394,63 +437,103 @@ extension CreatePostViewController : CreateHeaderDelegate{
             self.tableView.reloadData()
             self.removeActivityLoader()
         }
+//        self.tableView.reloadData()
     }
     
+    @IBAction func CloseLink(_ sender : UIButton){
+        self.updateContraintsFor(show: false)
+    }
     
-    func SendPostHeader(){
-        
-        if headerView.album_title.text == "" && !headerView.album_title.isHidden {
-            self.presentError(massageTilte: "Please create an album title")
-        }else if headerView.album_title.text != "" && !headerView.album_title.isHidden {
-            if self.selectedImage.count <= 0{
-                self.presentError(massageTilte: "Attach image(s) to create an album")
-            }else{
-                SendPost()
+    @IBAction func camera(_ sender: Any) {
+        let picker = TLPhotosPickerViewController()
+
+        picker.delegate = self
+        var configure = TLPhotosPickerConfigure()
+
+        configure.usedCameraButton = true
+        configure.maxSelectedAssets = 10
+        configure.allowedLivePhotos = true
+        configure.allowedVideo = true
+        configure.autoPlay = true
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    @IBAction func tagPeopleInPost(_ sender: Any) {
+        self.tag_type = "post"
+        self.performSegue(withIdentifier: "add_tag", sender: "post")
+    }
+    
+    @IBAction func send_post(_ sender: Any) {
+           
+           if self.album_title.text == "" && !self.album_title.isHidden {
+               self.presentError(massageTilte: "Please create an album title")
+           }else if self.album_title.text != "" && !self.album_title.isHidden {
+               if self.selectedImage.count <= 0{
+                   self.presentError(massageTilte: "Attach image(s) to create an album")
+               }else{
+                   SendPost()
+               }
+           }else if self.post_caption.text == "Whats on your mind..." && self.selectedImage.count == 0 && self.album_title.isHidden{
+               self.presentError(massageTilte: "Share your thoughts before posting")
+           }else {
+               self.SendPost()
+           }
+       }
+    
+    func updateContraintsFor(show : Bool){
+        if show{
+            self.linkView.snp.updateConstraints { (make) in
+                make.height.equalTo(70)
+                make.top.equalTo(self.post_caption.snp.bottom).offset(8)
             }
-        }else if headerView.post_caption.text == "Whats on your mind..." && self.selectedImage.count == 0 && headerView.album_title.isHidden{
-            self.presentError(massageTilte: "Share your thoughts before posting")
-        }else {
-            self.SendPost()
+            self.linkClose.isHidden = !show
+            self.linkURL.isHidden = !show
+            self.linkTitle.isHidden = !show
+            self.linkImage.isHidden = !show
+            self.linkDescription.isHidden = !show
+            self.linkView.isHidden = !show
+            self.cameraBtn.isEnabled = !show
+            
+        }else{
+            self.linkView.snp.updateConstraints { (make) in
+                make.height.equalTo(0)
+                make.top.equalTo(self.post_caption.snp.bottom).offset(0)
+            }
+            self.linkClose.isHidden = !show
+            self.linkURL.isHidden = !show
+            self.linkTitle.isHidden = !show
+            self.linkImage.isHidden = !show
+            self.linkDescription.isHidden = !show
+            self.linkView.isHidden = !show
+            self.cameraBtn.isEnabled = !show
         }
     }
-    
-    func PerformSegueHeader(identifier: String, type: String) {
-        self.tag_type = type
-        self.performSegue(withIdentifier: identifier, sender: self)
-    }
-    
-    func linkDismissed() {
-        self.linkTitle = ""
-        self.linkURL = ""
-        self.linkDesc = ""
-        self.linkImage = ""
-    }
-    
 }
+
 
 
 extension CreatePostViewController {
  
     func SendPost(){
   
-        if headerView.post_caption.text == "Whats on your mind..." {
-            headerView.post_caption.text = ""
+        if self.post_caption.text == "Whats on your mind..." {
+            self.post_caption.text = ""
         }
 
         let parameters: [String: Any] = [
                 "front_user_id" : "\(NetworkController.front_user_id)",
-                "feed_content" : "\(headerView.post_caption.text!)",
-                "album_title" : "\(headerView.album_title.text!)",
+            "feed_content" : "\(self.post_caption.text!)",
+                "album_title" : "\(self.album_title.text!)",
                 "post_tag" : "\(PostUpdateGlobal.post_tags)",
                 "photo_tags" : PostUpdateGlobal.photo_tags,
                 "species" : PostUpdateGlobal.g_species ,
                 "games" :  PostUpdateGlobal.g_games,
                 "location":  PostUpdateGlobal.loction,
                 "is_album" : "\(self.is_album)",
-                "link_url" : self.linkURL,
-                "link_desc" : self.linkDesc,
-                "link_title" : self.linkTitle,
-                "link_image" : self.linkImage
+            "link_url" : self.linkURL.text ?? "",
+                "link_desc" : self.linkDescription.text ?? "",
+                "link_title" : self.linkTitle.text ?? "",
+                "link_image" : self.linkImageURL
                 ]
 
         if InternetAvailabilty.isInternetAvailable(){

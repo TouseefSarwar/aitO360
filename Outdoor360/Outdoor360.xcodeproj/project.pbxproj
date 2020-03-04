@@ -62,6 +62,7 @@
 		791BDBC0230D683A003073F5 /* GMUStaticCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 791BDBAE230D6839003073F5 /* GMUStaticCluster.m */; };
 		791BDBC1230D683A003073F5 /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 791BDBB2230D6839003073F5 /* GQTPointQuadTree.m */; };
 		791BDBC2230D683A003073F5 /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 791BDBB4230D6839003073F5 /* GQTPointQuadTreeChild.m */; };
+		79299112240F964A00468F05 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79299111240F964A00468F05 /* Notifications.swift */; };
 		79334672230BD96B001C4B70 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79334671230BD96B001C4B70 /* Structures.swift */; };
 		7958041823EBEF80008C8AB7 /* SimpleTextPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958041723EBEF80008C8AB7 /* SimpleTextPost.swift */; };
 		7967F470235EE9280082A1A2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967F46E235EE9280082A1A2 /* PhotoCell.swift */; };
@@ -271,6 +272,13 @@
 			remoteGlobalIDString = 79B7250722E3173900CD60A3;
 			remoteInfo = Outdoor360;
 		};
+		79299114240F964A00468F05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79B7250022E3173900CD60A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79B7250722E3173900CD60A3;
+			remoteInfo = Outdoor360;
+		};
 		7958041A23EBEF80008C8AB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79B7250022E3173900CD60A3 /* Project object */;
@@ -462,6 +470,9 @@
 		791BDBB6230D6839003073F5 /* GQTPointQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTree.h; sourceTree = "<group>"; };
 		791BDBB7230D683A003073F5 /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
 		791BDBB8230D683A003073F5 /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
+		7929910F240F964A00468F05 /* Notifications.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Notifications.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79299111240F964A00468F05 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		79299113240F964A00468F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79334671230BD96B001C4B70 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		79374C312315149500953200 /* Outdoor360.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Outdoor360.entitlements; sourceTree = "<group>"; };
 		7958041523EBEF80008C8AB7 /* SimpleTextPost.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTextPost.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -699,6 +710,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		790A78AD23FA79C300573ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7929910C240F964900468F05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1071,6 +1089,15 @@
 			path = QuadTree;
 			sourceTree = "<group>";
 		};
+		79299110240F964A00468F05 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				79299111240F964A00468F05 /* Notifications.swift */,
+				79299113240F964A00468F05 /* Info.plist */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		7935534F231FDDEB000D869E /* TabsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1323,7 +1350,6 @@
 				799CD2F8230BBDF600F27497 /* HashTagViewController.swift */,
 				799CD2B7230BBDF600F27497 /* LoginViewController.swift */,
 				799CD369230BBDF900F27497 /* NewFeedsViewController.swift */,
-				799CD34F230BBDF700F27497 /* NotificationViewController.swift */,
 				79D96157233888D800DFD025 /* PeopleLikedViewController.swift */,
 				799CD34E230BBDF700F27497 /* SearchViewController.swift */,
 				799CD2B8230BBDF600F27497 /* SettingsViewController.swift */,
@@ -1351,6 +1377,7 @@
 		799CD2AF230BBDF500F27497 /* NotificationViews */ = {
 			isa = PBXGroup;
 			children = (
+				799CD34F230BBDF700F27497 /* NotificationViewController.swift */,
 				799CD2B3230BBDF500F27497 /* NotificationPostsViewController.swift */,
 				799CD2B0230BBDF500F27497 /* FirstView */,
 			);
@@ -1880,6 +1907,7 @@
 			children = (
 				79B7250A22E3173900CD60A3 /* Outdoor360 */,
 				79B3A384240394770060AEC1 /* UITestCases */,
+				79299110240F964A00468F05 /* Notifications */,
 				79B7250922E3173900CD60A3 /* Products */,
 				5979ECCD1D573AB302D3CF7C /* Pods */,
 				2C375906CCD1077F9B877564 /* Frameworks */,
@@ -1907,6 +1935,7 @@
 				79B2BCB823FBBEC200FD8DC0 /* MyProfile.xctest */,
 				79CAD1AA23FD03C7000FBF86 /* Feeds.xctest */,
 				79CAD1B823FD3D75000FBF86 /* OtherProfile.xctest */,
+				7929910F240F964A00468F05 /* Notifications.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2169,6 +2198,24 @@
 			name = SignUpGoogle;
 			productName = SignUpGoogle;
 			productReference = 790A78B023FA79C300573ED7 /* SignUpGoogle.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7929910E240F964900468F05 /* Notifications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79299116240F964A00468F05 /* Build configuration list for PBXNativeTarget "Notifications" */;
+			buildPhases = (
+				7929910B240F964900468F05 /* Sources */,
+				7929910C240F964900468F05 /* Frameworks */,
+				7929910D240F964900468F05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79299115240F964A00468F05 /* PBXTargetDependency */,
+			);
+			name = Notifications;
+			productName = Notifications;
+			productReference = 7929910F240F964A00468F05 /* Notifications.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		7958041423EBEF80008C8AB7 /* SimpleTextPost */ = {
@@ -2479,6 +2526,10 @@
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 79B7250722E3173900CD60A3;
 					};
+					7929910E240F964900468F05 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 79B7250722E3173900CD60A3;
+					};
 					7958041423EBEF80008C8AB7 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 79B7250722E3173900CD60A3;
@@ -2583,6 +2634,7 @@
 				79B2BCB723FBBEC200FD8DC0 /* MyProfile */,
 				79CAD1A923FD03C7000FBF86 /* Feeds */,
 				79CAD1B723FD3D75000FBF86 /* OtherProfile */,
+				7929910E240F964900468F05 /* Notifications */,
 			);
 		};
 /* End PBXProject section */
@@ -2596,6 +2648,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		790A78AE23FA79C300573ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7929910D240F964900468F05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2853,6 +2912,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				790A78B323FA79C300573ED7 /* SignUpGoogle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7929910B240F964900468F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79299112240F964A00468F05 /* Notifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3161,6 +3228,11 @@
 			target = 79B7250722E3173900CD60A3 /* Outdoor360 */;
 			targetProxy = 790A78B523FA79C300573ED7 /* PBXContainerItemProxy */;
 		};
+		79299115240F964A00468F05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79B7250722E3173900CD60A3 /* Outdoor360 */;
+			targetProxy = 79299114240F964A00468F05 /* PBXContainerItemProxy */;
+		};
 		7958041B23EBEF80008C8AB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79B7250722E3173900CD60A3 /* Outdoor360 */;
@@ -3323,6 +3395,46 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Outdoors360.SignUpGoogle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Outdoor360;
+			};
+			name = Release;
+		};
+		79299117240F964A00468F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNA8SPW7S6;
+				INFOPLIST_FILE = Notifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Outdoors360.Notifications;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Outdoor360;
+			};
+			name = Debug;
+		};
+		79299118240F964A00468F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNA8SPW7S6;
+				INFOPLIST_FILE = Notifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Outdoors360.Notifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4117,6 +4229,15 @@
 			buildConfigurations = (
 				790A78B823FA79C300573ED7 /* Debug */,
 				790A78B923FA79C300573ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79299116240F964A00468F05 /* Build configuration list for PBXNativeTarget "Notifications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79299117240F964A00468F05 /* Debug */,
+				79299118240F964A00468F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

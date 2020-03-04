@@ -33,7 +33,10 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.isAccessibilityElement = true
+        tableView.accessibilityIdentifier = "notificationTable"
         self.noNotification.isHidden = true
+        
         let state = UIApplication.shared.applicationState
         if state == UIApplication.State.inactive{
             var dic = UserDefaults.standard.dictionary(forKey: "userInfo")
@@ -107,6 +110,8 @@ extension NotificationViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
          let firstCell = tableView.dequeueReusableCell(withIdentifier: "first", for: indexPath) as! FirstView
+        firstCell.isAccessibilityElement = true
+        firstCell.accessibilityIdentifier = "cell_no_\(indexPath.row)"
         firstCell.Configure(cell: self.noticationData[indexPath.row])
         firstCell.delegate = self
     

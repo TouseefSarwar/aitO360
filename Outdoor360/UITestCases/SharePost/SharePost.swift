@@ -32,6 +32,15 @@ class SharePost: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let signInButton = app.buttons["SIGN IN"]
         sleep(15)
+        addUIInterruptionMonitor(withDescription: "“Outdoors360” Would Like to Send You Notifications"){ alert in
+             
+             if alert.buttons["Allow"].exists{
+                 alert.buttons["Allow"].tap()
+                 return true
+             }
+             return false
+         }
+        app.tap()
         
         if signInButton.exists{
             XCTAssertTrue(signInButton.exists)
@@ -81,6 +90,19 @@ class SharePost: XCTestCase {
         app.swipeDown()
 
         sleep(10)
+        
+        //MARK: Share on Other Social Network.
+//        let shareButton = myTable.cells["cell_no_0"].buttons["share"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: shareButton, handler: nil)
+        waitForExpectations(timeout: 20, handler: nil)
+        XCTAssertTrue(shareButton.exists)
+        shareButton.tap()
+        
+        let shareToSocial = app.sheets["Select the social network you wish to share post on."].scrollViews.otherElements.buttons["Share to Social Network"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: shareToSocial, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssertTrue(shareToSocial.exists)
+        shareToSocial.tap()
                 
     }
 

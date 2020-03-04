@@ -41,7 +41,7 @@ class SIgnUpTwitter: XCTestCase {
             }
             return false
         }
-        
+        app.tap()
         if !signUpButton.exists{
             let rightButton =  app.navigationBars["Outdoor360.NewFeedsView"].images["profile"]
             expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: rightButton, handler: nil)

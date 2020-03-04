@@ -49,8 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "P8Qi7evb5J8srrQMUqLXTAD1Q", consumerSecret: "OFuqfM9v0dFiHe6xdS9kT7uR4Xz9V3ObAqFVSsbszCgWbupAKJ")
         //Google Things....
         GIDSignIn.sharedInstance()?.clientID = "260022084317-1bcfcsahmtiirmr5ck3ft9l0q6rkbo7h.apps.googleusercontent.com"
-        GMSPlacesClient.provideAPIKey("AIzaSyDaB6Maex92zIOK9jgHoNba5LixPY8fI0Y")
-        GMSServices.provideAPIKey("AIzaSyDaB6Maex92zIOK9jgHoNba5LixPY8fI0Y")
+        GMSPlacesClient.provideAPIKey("AIzaSyDkrmNt7yLpSO4JA9k7JdzVmX3KQrvvyzg")
+        GMSServices.provideAPIKey("AIzaSyDkrmNt7yLpSO4JA9k7JdzVmX3KQrvvyzg")
         //Register when going to logged in and remove registration when logged out...
         let userdata  = UserDefaults.standard.dictionary(forKey: "userInfo")
         if userdata != nil{

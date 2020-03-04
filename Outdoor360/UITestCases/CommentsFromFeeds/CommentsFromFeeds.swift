@@ -41,6 +41,8 @@ class CommentsFromFeeds: XCTestCase {
             }
             return false
         }
+        app.tap()
+        sleep(15)
         if signInButton.exists{
             XCTAssertTrue(signInButton.exists)
             signInButton.tap()

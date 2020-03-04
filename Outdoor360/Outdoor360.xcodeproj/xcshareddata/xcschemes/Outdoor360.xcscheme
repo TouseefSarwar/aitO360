@@ -227,6 +227,16 @@
                ReferencedContainer = "container:Outdoor360.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7929910E240F964900468F05"
+               BuildableName = "Notifications.xctest"
+               BlueprintName = "Notifications"
+               ReferencedContainer = "container:Outdoor360.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,11 +22,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="yvd-Zu-2DY" customClass="ImageViewX" customModule="Outdoor360" customModuleProvider="target">
                         <rect key="frame" x="12" y="21" width="40" height="40"/>
+                        <accessibility key="accessibilityConfiguration" identifier="userImage">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="vHC-Yf-Wl5"/>
                             <constraint firstAttribute="height" constant="40" id="yGD-QR-NIC"/>
@@ -41,6 +42,7 @@
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgA-u1-Ayz">
                         <rect key="frame" x="60" y="28" width="30" height="26"/>
+                        <accessibility key="accessibilityConfiguration" identifier="userName"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="UdV-CH-JNZ"/>
                         </constraints>
@@ -54,6 +56,7 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="added new" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-aY-A3A">
                         <rect key="frame" x="93" y="28" width="64.5" height="27"/>
+                        <accessibility key="accessibilityConfiguration" identifier="typeNotification"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="1ms-yj-v5z"/>
                         </constraints>
@@ -62,7 +65,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a week ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrK-Fq-fyB">
-                        <rect key="frame" x="257.5" y="60.5" width="50.5" height="12"/>
+                        <rect key="frame" x="257.5" y="61" width="50.5" height="12"/>
                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="10"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -79,6 +82,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-Zn-9He">
                         <rect key="frame" x="160.5" y="28" width="30" height="26"/>
+                        <accessibility key="accessibilityConfiguration" identifier="post"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="UIA-uj-5gw"/>
                         </constraints>
@@ -115,6 +119,9 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="post" destination="3lE-Zn-9He" id="qgz-Gs-6EM"/>

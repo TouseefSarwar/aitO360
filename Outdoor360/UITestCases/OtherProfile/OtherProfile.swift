@@ -39,7 +39,7 @@ class OtherProfile: XCTestCase {
              }
              return false
          }
-
+        app.tap()
         if signInButton.exists{
              XCTAssertTrue(signInButton.exists)
              signInButton.tap()
@@ -239,6 +239,65 @@ class OtherProfile: XCTestCase {
         expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backProfile, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
         backProfile.tap()
+        sleep(5)
+        
+        app.terminate()
+        
+        sleep(5)
+        
+        app.launch()
+
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+//        let signInButton = app.buttons["SIGN IN"]
+        
+        addUIInterruptionMonitor(withDescription: "“Outdoors360” Would Like to Send You Notifications"){ alert in
+            
+            if alert.buttons["Allow"].exists{
+                alert.buttons["Allow"].tap()
+                return true
+            }
+            return false
+        }
+        app.tap()
+        sleep(15)
+        if signInButton.exists{
+            XCTAssertTrue(signInButton.exists)
+            signInButton.tap()
+            let elementsQuery = app.scrollViews.otherElements
+                        let emailTextField = elementsQuery.textFields["Email"]
+            XCTAssertTrue(emailTextField.exists)
+            emailTextField.tap()
+            emailTextField.typeText("jcgalleries.testemail1@gmail.com")
+            let passwordTextField = elementsQuery.secureTextFields["Password"]
+            XCTAssertTrue(passwordTextField.exists)
+            passwordTextField.tap()
+            passwordTextField.typeText("123456")
+            let doneButton = app.toolbars["Toolbar"].buttons["Done"]
+            XCTAssertTrue(doneButton.exists)
+            doneButton.tap()
+            let loginButton = elementsQuery.buttons["Login"]
+            XCTAssertTrue(loginButton.exists)
+            loginButton.tap()
+        }
+        sleep(15)
+        
+        let commentBtn = myTable.cells["cell_no_0"].buttons["comment"]
+        XCTAssertTrue(commentBtn.exists)
+        commentBtn.tap()
+        
+        app.typeText("😍😍😍😍😍 This is my test comment...! #MastMalang... 😍")
+        
+        let sendBtn = app.buttons["send"]
+        XCTAssertTrue(sendBtn.exists)
+        sendBtn.tap()
+        sleep(5)
+        
+        
+        
+        
+        
         
         
     }

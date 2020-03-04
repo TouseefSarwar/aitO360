@@ -40,7 +40,7 @@ class MyProfile: XCTestCase {
             }
             return false
         }
-
+        app.tap()
        if signInButton.exists{
             XCTAssertTrue(signInButton.exists)
             signInButton.tap()
@@ -203,8 +203,227 @@ class MyProfile: XCTestCase {
         app.swipeUp()
         app.swipeUp()
         
+        sleep(10)
+        app.terminate()
+        
+        //MARK: Others Profile Case
         
         sleep(10)
+        app.launch()
+        
+        
+         sleep(15)
+         addUIInterruptionMonitor(withDescription: "“Outdoors360” Would Like to Send You Notifications"){ alert in
+             
+             if alert.buttons["Allow"].exists{
+                 alert.buttons["Allow"].tap()
+                 return true
+             }
+             return false
+         }
+        app.tap()
+        if signInButton.exists{
+         XCTAssertTrue(signInButton.exists)
+         signInButton.tap()
+         let elementsQuery = app.scrollViews.otherElements
+                     let emailTextField = elementsQuery.textFields["Email"]
+         XCTAssertTrue(emailTextField.exists)
+         emailTextField.tap()
+         emailTextField.typeText("jcgalleries.testemail1@gmail.com")
+         let passwordTextField = elementsQuery.secureTextFields["Password"]
+         XCTAssertTrue(passwordTextField.exists)
+         passwordTextField.tap()
+         passwordTextField.typeText("123456")
+         let doneButton = app.toolbars["Toolbar"].buttons["Done"]
+         XCTAssertTrue(doneButton.exists)
+         doneButton.tap()
+         let loginButton = elementsQuery.buttons["Login"]
+         XCTAssertTrue(loginButton.exists)
+         loginButton.tap()
+        }
+        //MARK: Image Controlles from here
+        let myTable = app.tables.matching(identifier: "feedsList")
+        let cell = myTable.cells["cell_no_0"]
+        cell.children(matching: .image).element.tap()
+
+        let otherTable = app.tables.matching(identifier: "otherProfile").cells["cell_no_0"]
+
+        //About section....
+                            
+        let otherViewAboutButton = otherTable.buttons["View More"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherViewAboutButton, handler: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+        XCTAssertTrue(otherViewAboutButton.exists)
+        otherViewAboutButton.tap()
+
+
+            
+        let otherBackAbout = app.navigationBars["About"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackAbout, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackAbout.exists)
+        otherBackAbout.tap()
+
+
+        //Followers section....
+        let otherViewFollowersButton = otherTable.buttons["View Followers"]
+        XCTAssertTrue(otherViewFollowersButton.exists)
+        otherViewFollowersButton.tap()
+        sleep(5)
+
+        let otherBackFollower = app.navigationBars["Followers"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackFollower, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackFollower.exists)
+        otherBackFollower.tap()
+
+        //Photos section....
+        let otherViewPhotoButton = otherTable.buttons["View Photos"]
+        XCTAssertTrue(otherViewPhotoButton.exists)
+        otherViewPhotoButton.tap()
+        sleep(5)
+        let otherBackPhotos = app.navigationBars["Photos"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackPhotos, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackPhotos.exists)
+        otherBackPhotos.tap()
+
+
+        app.swipeUp()
+
+        //Videos section....
+
+        let otherViewVideosButton = tablesQuery.buttons["View Videos"]
+        XCTAssertTrue(otherViewVideosButton.exists)
+        otherViewVideosButton.tap()
+        sleep(5)
+        let otherBackVideos = app.navigationBars["Videos"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackVideos, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackVideos.exists)
+        otherBackVideos.tap()
+
+        //Albums section....
+        let otherViewAlbumsButton = otherTable.buttons["View Albums"]
+        XCTAssertTrue(otherViewAlbumsButton.exists)
+        otherViewAlbumsButton.tap()
+        sleep(5)
+        let otherBackAlbums = app.navigationBars["Albums"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackAlbums, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackAlbums.exists)
+        otherBackAlbums.tap()
+
+        //Maps section....
+
+        let otherViewMapButton = tablesQuery.buttons["View Map"]
+        XCTAssertTrue(otherViewMapButton.exists)
+        otherViewMapButton.tap()
+        sleep(10)
+        let otherBackMap = app.navigationBars["Photos Map"].buttons["Back"]
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: otherBackMap, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(otherBackMap.exists)
+        otherBackMap.tap()
+
+        app.swipeUp()
+        app.swipeUp()
+
+        sleep(10)
+
+        let backProfile = app.navigationBars["Outdoor360.OthersView"].children(matching: .button).element
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backProfile, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        backProfile.tap()
+
+
+        //MARK: User Name Controlles from here
+        cell.buttons["userName"].tap()
+
+        //About section....
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: viewAboutButton, handler: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+        XCTAssertTrue(viewAboutButton.exists)
+        viewAboutButton.tap()
+
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backAbout, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backAbout.exists)
+        backAbout.tap()
+
+
+        //Followers section....
+        XCTAssertTrue(viewFollowersButton.exists)
+        viewFollowersButton.tap()
+        sleep(5)
+
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backFollower, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backFollower.exists)
+        backFollower.tap()
+
+        //Photos section....
+
+        XCTAssertTrue(viewPhotoButton.exists)
+        viewPhotoButton.tap()
+        sleep(5)
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backPhotos, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backPhotos.exists)
+        backPhotos.tap()
+
+
+        app.swipeUp()
+
+        //Videos section....
+
+
+        XCTAssertTrue(viewVideosButton.exists)
+        viewVideosButton.tap()
+        sleep(5)
+
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backVideos, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backVideos.exists)
+        backVideos.tap()
+
+
+        //Albums section....
+
+        XCTAssertTrue(viewAlbumsButton.exists)
+        viewAlbumsButton.tap()
+        sleep(5)
+
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backAlbums, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backAlbums.exists)
+        backAlbums.tap()
+
+
+
+        //Maps section....
+
+
+        XCTAssertTrue(viewMapButton.exists)
+        viewMapButton.tap()
+        sleep(10)
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backMap, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertTrue(backMap.exists)
+        backMap.tap()
+
+        app.swipeUp()
+
+        sleep(10)
+
+        app.swipeUp()
+
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: backProfile, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        backProfile.tap()
+        sleep(5)
+        
+        
         
     }
 

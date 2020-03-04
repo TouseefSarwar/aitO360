@@ -32,6 +32,15 @@ class SharePostSocialNetworks: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let signInButton = app.buttons["SIGN IN"]
         sleep(15)
+        addUIInterruptionMonitor(withDescription: "“Outdoors360” Would Like to Send You Notifications"){ alert in
+             
+             if alert.buttons["Allow"].exists{
+                 alert.buttons["Allow"].tap()
+                 return true
+             }
+             return false
+         }
+        app.tap()
         
         if signInButton.exists{
             XCTAssertTrue(signInButton.exists)

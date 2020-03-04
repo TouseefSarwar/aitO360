@@ -86,6 +86,7 @@ extension NotificationPostsViewController : UITableViewDelegate , UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let feed = tableView.dequeueReusableCell(withIdentifier: Feed_Cell.identifier, for: indexPath) as! Feed_Cell
+        
         feed.configureCell(cellData: self.post , index: indexPath.row)
         feed.delegate = self
         return feed

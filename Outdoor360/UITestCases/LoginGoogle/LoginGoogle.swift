@@ -40,7 +40,8 @@ class LoginGoogle: XCTestCase {
             }
             return false
         }
-
+        app.tap()
+        
         if signInButton.exists{
             XCTAssertTrue(signInButton.exists)
             signInButton.tap()
@@ -69,6 +70,7 @@ class LoginGoogle: XCTestCase {
             }
           return true
         }
+        app.tap()
         sleep(5)
     }
 
