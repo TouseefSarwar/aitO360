@@ -3,8 +3,8 @@ os : osx
 
 addons:
   browserstack:
-    username: "touseefiosdev1"
-    access_key: "tsKsjvTpmoyh86zyH9nb"
+    username: "sibghatzahoor1"
+    access_key: "vgs1XxvSbmyQjUq3Dtzy"
     
     
 script:
