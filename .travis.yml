@@ -12,4 +12,4 @@ script:
     
 #    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://3730d97411a4c94c6d7158a5281531331dae93ca\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://67e1689cb56a412a6b10c4a6bd1961023babbecb\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"sibghatzahoor1:vgs1XxvSbmyQjUq3Dtzy\""
     
-    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://3730d97411a4c94c6d7158a5281531331dae93ca\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://0070b7150ccf6a65b9598461e24f1a0e613138f5\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"sibghatzahoor1:vgs1XxvSbmyQjUq3Dtzy\""
+    - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://3730d97411a4c94c6d7158a5281531331dae93ca\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://ad5172fc3a0975f8f4b408cb75b535bd3c3a7bc8\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"sibghatzahoor1:vgs1XxvSbmyQjUq3Dtzy\""
