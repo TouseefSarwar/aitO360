@@ -12,3 +12,4 @@ script:
     
     - "curl -H 'Content-Type: application/json' -X POST  -d '{\"app\": \"bs://b4c4b5344b9b00e3552fd2af941af7c638af59fa\", \"deviceLogs\" : \"true\", \"testSuite\": \"bs://06e154c2a11df8480acd4b391bdb2b51c574e2b3\", \"devices\" : [\"iPhone 11 Pro Max-13\"]}' \"https://api-cloud.browserstack.com/app-automate/xcuitest/build\"  -u \"sibghatzahoor1:vgs1XxvSbmyQjUq3Dtzy\""
    
+ 
